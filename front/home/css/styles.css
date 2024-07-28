@@ -40,7 +40,6 @@ body {
 
 }
 
-
 .coursera-logo {
     height: 22px;
 }
@@ -193,3 +192,60 @@ body {
         max-width: 100%;
     }
 }
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.badge-secondary {
+    background-color: #6c757d;
+}
+
+.imagen-cards {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+    border: 1px solid #007bff; /* Cambia el color del borde */
+}
+
+
+.text-tercero{
+    padding-left: 94px !important;
+    padding-right: 94px !important;
+}
+
+.container-fluid{
+    margin-top: 1rem !important;
+    padding-left: 94px !important;
+    padding-right: 94px !important;
+}
+
+.text-google{
+    display: flex;
+    color:#636363;
+    margin-bottom:10px;
+}
+
+.logo-google{
+    width: 23px;
+    margin-right: 10px;
+}
+
+.botones-mostrar{
+    padding-left: 81px;
+}
+
+.seccion-certificados{
+    margin-top: 35px;
+}
+
