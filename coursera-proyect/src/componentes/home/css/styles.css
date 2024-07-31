@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -10,13 +10,12 @@ body {
     padding: 10px 0;
 }
 
+.navbar{
+    border-bottom: 1px solid #ccc; /* Borde inferior */
+}
+
 .navbar-nav .nav-link {
     color: #fff !important;
-}
-.navbar .container-fluid{
-    padding-left: 13px !important;
-    padding-right: 43px !important;
-    margin-top: -12px;
 }
 
 .navbar{
@@ -40,7 +39,6 @@ body {
     justify-content: flex-start !important;
 
 }
-
 
 .coursera-logo {
     height: 22px;
@@ -105,7 +103,7 @@ body {
 .navbar-links {
     display: flex;
     align-items: center;
-    margin-left: 0px;
+    margin-left: 82px;
 }
 
 .navbar-links a {
@@ -116,14 +114,7 @@ body {
 }
 
 .navbar-join {
-    
-        display: flex;
-        align-items: center; /* Para centrar verticalmente */
-    
-    width:fit-content;
-    margin-right: -50px;
-      
-    margin-left: 0px;
+    margin-left: 20px;
 }
 
 .navbar-join a {
@@ -143,3 +134,121 @@ body {
     background-color: #cceeff; /* Cambiar color de fondo en hover */
     color: #0056D2;
 }
+
+/*estilos para el carusel para que las imagenes se despliegue*/
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item .container,
+.carousel-item .row {
+    height: 100vh; /* Full screen height */
+    margin-top: -33px;
+}
+
+.carousel-item .col-md-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -93px;
+
+}
+
+.carousel-item img {
+    max-width: 108%;
+}
+.img-principal{
+    margin-top: 1px;
+    margin-left: 25px;
+    height: 450px;
+}
+
+.img-persona{
+    margin-top: 42px;
+}
+
+.logo-plus{
+    margin-left: -308px;
+    box-sizing: border-box;
+    height: 22px;
+}
+
+.boton-comenzar{
+    margin-left: -169px !important;
+}
+
+.texto-primero{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.texto-segundo{
+    font-weight: bold;
+    font-size: 2.5rem;
+
+}
+
+@media (max-width: 768px) {
+    .carousel-item .col-md-6 {
+        max-width: 100%;
+    }
+}
+
+/*estilos de las seccion de las cards de certificados*/
+
+
+.seccion-certificados{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.badge-secondary {
+    background-color: #6c757d;
+}
+
+.card {
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
+    border-radius: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+    border: 1px solid #007bff; /* Cambia el color del borde */
+}
+
+.text-tercero{
+    padding-left: 94px !important;
+    padding-right: 94px !important;
+}
+
+.container-fluid{
+    margin-top: 1rem !important;
+    padding-left: 94px !important;
+    padding-right: 94px !important;
+}
+
+.text-google{
+    display: flex;
+    color:#636363;
+    margin-bottom:10px;
+}
+
+.logo-google{
+    width: 23px;
+    margin-right: 10px;
+}
+
+.botones-mostrar{
+    padding-left: 81px;
+}
+

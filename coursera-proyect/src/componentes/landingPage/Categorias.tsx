@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Picture from './Example.png';
+import Picture from '../imagenes/Example.png';
 function Categorias() {
   return (
     <Container>
@@ -11,7 +11,7 @@ function Categorias() {
 <CarCategoria titulo="Ciencia de Datos" cantidad="200"/>
 <CarCategoria titulo="Inteligencia Artificial" cantidad="80"/>
 <CarCategoria titulo="Marketing Digital" cantidad="120"/>
-<CarCategoria titulo="Desarrollo de Apps" cantidad="90"/>
+<CarCategoria titulo="Desarrollo de Apps Móviles" cantidad="90"/>
 <CarCategoria titulo="Ciberseguridad" cantidad="60"/>
 <CarCategoria titulo="Gestión de Proyectos" cantidad="75"/>
 <CarCategoria titulo="Diseño Gráfico" cantidad="130"/>

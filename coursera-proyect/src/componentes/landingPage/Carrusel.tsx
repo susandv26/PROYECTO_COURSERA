@@ -1,13 +1,13 @@
 import Carousel from 'react-bootstrap/Carousel';
-import myimage from './Example.png';
+import myimage from '../imagenes/Example.png';
 
 function Slider() {
   return (
-    <Carousel>
+    <Carousel className="mx-5">
 
       <Carousel.Item>
         <CardSlider />
-        <Carousel.Caption>
+        <Carousel.Caption>34
           <h3>Third slide label</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
