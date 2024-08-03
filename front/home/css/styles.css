@@ -1,3 +1,9 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0;
@@ -237,54 +243,8 @@ label{
 
 /*estilos de las seccion de las cards de certificados populares*/
 
-
-.seccion-certificados{
+.seccion-cursos{
     margin-top: 70px;
-    margin-bottom: 35px;
-}
-
-.text-titulo{
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #382D8B;
-}
-
-
-.card-img-top {
-    height: 180px;
-    object-fit: cover;
-    padding: 10px;
-    border-radius: 20px;
-}
-
-.badge-secondary {
-    background-color: #6c757d;
-}
-
-.card {
-    width: 114%;
-    transition: transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
-    border-radius: 20px;
-    min-height: 400px;
-
-}
-
-
-.card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-.card:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añade una sombra */
-    border: 1px solid #007bff; /* Cambia el color del borde */
-}
-.text-tercero{
-    padding-left: 94px !important;
-    padding-right: 94px !important;
 }
 
 .container-fluid{
@@ -293,23 +253,138 @@ label{
     padding-right: 94px !important;
 }
 
-.text-google{
+/*.text-titulo{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #382D8B;
+}*/
+
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 1.25rem;
+}
+
+.badge-secondary {
+    background-color: #6c757d;
+}
+
+.card{
+    border-radius: 1.25rem !important;
+    margin:15px;
+}
+
+.card-body {
+    padding:12px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+    border: 1px solid #007bff; /* Cambia el color del borde */
+    border-radius: 1.25rem;
+}
+
+.icono-texto{
     display: flex;
     color:#636363;
     margin-bottom:10px;
+    font-size: 0.8rem;
+    margin-top: -10px;
 }
 
 .card-title{
-    font-size: 1rem;
-    margin-top: -20px;
+    font-size: 0.9rem;
+    margin-top: -15px;
+    font-weight: bold;
 }
-.logo-google{
-    width: 23px;
-    margin-right: 10px;
+
+.card-text{
+    font-size: 0.9rem;
+    margin-top: 30px !important;
+}
+
+.card-pie{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color:#636363;
+    font-size: 0.8rem;
+}
+
+.icono-imagen{
+    width: 20px; /* Ajusta el tamaño del ícono según sea necesario */
+    height: 20px; /* Ajusta el tamaño del ícono según sea necesario */
+    border: 1px solid #bdb9b9;;
 }
 
 .botones-mostrar{
     margin-top: 20px;
-    padding-left: 81px;
+    padding-left: -4px;
+    margin-bottom: 20px;
 }
 
+/*seccion de cards de explore*/
+.card-categoria {
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 5px;
+}
+
+.card-categoria:hover{
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px; /* Añade una sombra */
+    border: 1px solid #cdcfd3; /* Cambia el color del borde */
+    border-radius: 5px;
+
+}
+
+.card-cuerpo{
+    margin-left: -12px;
+    padding-top: 10px;
+
+}
+
+.category-name {
+    padding-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.category-cursos{
+    font-weight: bold;
+    color: #636363;
+    font-size: 1.2rem;
+    
+
+}
+
+/*seccion de testimonios*/
+
+
+.testimonial-card {
+    text-align: center;
+    padding: 20px;
+}
+.testimonial-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.testimonial-card h5 {
+    color: #4A4A4A;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.testimonial-card p {
+    font-style: italic;
+    margin-top: 10px;
+}
+.testimonial-card small {
+    color: #777;
+}
+.text-center{
+    margin-top: 60px;
+}
