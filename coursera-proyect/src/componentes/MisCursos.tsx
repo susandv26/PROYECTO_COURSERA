@@ -1,4 +1,4 @@
-
+import React from 'react';
 import picture from './imagenes/Example.png';
 import { Button } from 'react-bootstrap';
 import Footer from './footer';

@@ -11,6 +11,8 @@ import Landing from "./componentes/landingPage/Landing.tsx";
 import MisCursos from "./componentes/MisCursos.tsx";
 import Perfil from "./componentes/Perfil/perfil.tsx";
 import Instructor from "./componentes/Instructor/Instructor.tsx";
+import Home from "./componentes/home/home.tsx";
+import Landing2 from "./componentes/Landing2/Landing2.tsx";
 
 
 const router = createBrowserRouter([
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
     children:[
       {
         path: "/",
-        element: <Landing />,
+        element: <Landing2 />,
     
       },{
         path: "/miscursos",
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/instructor",
         element: <Instructor />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
       }
     ]
   },

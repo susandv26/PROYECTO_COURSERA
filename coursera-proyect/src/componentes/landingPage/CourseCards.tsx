@@ -1,3 +1,4 @@
+import React from "react";
 import { Button, Card, Stack } from "react-bootstrap";
 import picture from '../imagenes/Example.png';
 

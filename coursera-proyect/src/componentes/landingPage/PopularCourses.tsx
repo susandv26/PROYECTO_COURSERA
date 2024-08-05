@@ -1,3 +1,4 @@
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import illinios from "../imagenes/illinois-3.png"
 import IBM from "../imagenes/1000px-IBM_logo.svg.png"
