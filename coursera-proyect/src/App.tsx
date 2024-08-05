@@ -1,8 +1,11 @@
 
-import Landing from "./componentes/landingPage/Landing";
-import MisCursos from "./componentes/MisCursos";
+import { Outlet } from "react-router-dom";
+
+
 
 import Navbar from "./componentes/nav/NavBar";
+
+
 
 
 
@@ -11,13 +14,11 @@ function App() {
 
   return (<>
   <Navbar />
-  <Landing />
-  <MisCursos />
-    
+
+  <Outlet />
   </>
   
   );
 }
 
-export default App;
-
+export default App

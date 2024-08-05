@@ -5,6 +5,12 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
 function LoginModal() {
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/perfil');
+  };
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -44,7 +50,7 @@ function LoginModal() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleButtonClick}>
             Login
           </Button>
         </Modal.Footer>
@@ -57,6 +63,7 @@ export default LoginModal
 
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { useNavigate } from 'react-router-dom';
 
 function PlaintextExample() {
   return (
