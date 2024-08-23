@@ -1,11 +1,11 @@
-import React from "react";
+// import React from "react";
 
 function componente() {
   return <>
   <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Open Modal
 </button>
-<div className="modal fade" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade"  id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">

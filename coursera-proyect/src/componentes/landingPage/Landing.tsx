@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 
 import Slider from "./Carrusel";
 import PopularCourses from "./PopularCourses";
@@ -11,6 +11,7 @@ import ListCourses from "./CourseCards";
 export default function landing() {
   return (
     <>
+    <Slider></Slider>
     <Slider/>
     <PopularCourses />
     <ListCourses />

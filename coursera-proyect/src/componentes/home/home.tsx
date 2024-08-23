@@ -1,4 +1,5 @@
-import React from 'react'
+// import React from 'react'
+
 import google from './img/logo-google.png'
 import karin from './img/photo_karim.png'
 import './css/styles.css'

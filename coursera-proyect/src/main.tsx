@@ -7,12 +7,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Landing from "./componentes/landingPage/Landing.tsx";
 import MisCursos from "./componentes/MisCursos.tsx";
 import Perfil from "./componentes/Perfil/perfil.tsx";
 import Instructor from "./componentes/Instructor/Instructor.tsx";
 import Home from "./componentes/home/home.tsx";
 import Landing2 from "./componentes/Landing2/Landing2.tsx";
+import Apiclient from "./Apiclient.tsx";
+import RegistroUsuarios from "./componentes/RegistroUsuarios.tsx";
 
 
 const router = createBrowserRouter([
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
     element: <App />,
     children:[
       {
-        path: "/",
+        path: "/landing",
         element: <Landing2 />,
     
       },{
@@ -39,9 +40,14 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
-      }
+      },
+      {path: "/api",
+      element: <Apiclient/>},
+      
+      {path: "/singin",
+        element: <RegistroUsuarios/>}
     ]
-  },
+  }
 
 ]);
 

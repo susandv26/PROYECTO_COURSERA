@@ -1,4 +1,5 @@
-import React from 'react'
+// import React from 'react'
+
 import principal from './img/imagen-principal.png'
 import testimonio1 from "./img/testimonio-1.png"
 import ciencias from "./img/ciencias-datos.png"

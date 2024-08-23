@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+
 import picture from './imagenes/Example.png';
 import { Button } from 'react-bootstrap';
 import Footer from './footer';
@@ -68,7 +69,7 @@ function MisCursosCard(props:props) {
       <div className="col-md-6 border-end border-opacity-25 border-black border-1 m-1">
         <div className="card-body">
         <div className="mb-2 text-muted">{props.tipo} | {props.empresa} </div>
-          <h5 className="card-title">{props.titulo}</h5>
+          <h5 className="card-title " style={{paddingTop:"8px"}}>{props.titulo}</h5>
         
         <div>
           {props.descripcion}
