@@ -71,7 +71,7 @@ export default function CrearLeccion() {
             <Form.Label>Respuestas</Form.Label>
             {respuestas.map((respuesta, index) => (
               <InputGroup className="mb-2" key={index}>
-                <InputGroup.Radio
+                <InputGroup.Radio 
                   aria-label={`Respuesta ${index + 1}`}
                   checked={respuestaCorrecta === index.toString()}
                   onChange={() => setRespuestaCorrecta(index.toString())}
@@ -81,7 +81,7 @@ export default function CrearLeccion() {
                   placeholder={`Respuesta ${index + 1}`}
                   value={respuesta}
                   onChange={(e) => handleRespuestaChange(index, e.target.value)}
-                />
+                ></Form.Control>
               </InputGroup>
             ))}
           </Form.Group>

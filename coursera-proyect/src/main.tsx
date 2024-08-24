@@ -17,6 +17,10 @@ import RegistroUsuarios from "./componentes/RegistroUsuarios.tsx";
 import CrearCurso from "./componentes/CrearCurso.tsx";
 import CrearModulos from "./componentes/CrearModulos.tsx";
 import CrearLeccion from "./componentes/CrearLeccion.tsx";
+import Lecciones from "./componentes/Lecciones.tsx";
+import Modulos from "./componentes/Modulos.tsx";
+import Cursos from "./componentes/Cursos.tsx";
+import Inscripcion from "./componentes/Inscripcion.tsx";
 
 
 const router = createBrowserRouter([
@@ -61,6 +65,25 @@ const router = createBrowserRouter([
       
       {path: "/leccioncrear",
         element: <CrearLeccion/>}
+      
+      ,
+      
+      {path: "/leccion",
+        element: <Lecciones/>}
+      
+      ,
+      
+      {path: "/modulo",
+        element: <Modulos/>}
+      
+      ,
+      
+      {path: "/curso",
+        element: <Cursos/>}
+      ,
+      
+      {path: "/inscripcion",
+        element: <Inscripcion />}
       
       
       
