@@ -14,6 +14,9 @@ import Home from "./componentes/home/home.tsx";
 import Landing2 from "./componentes/Landing2/Landing2.tsx";
 import Apiclient from "./Apiclient.tsx";
 import RegistroUsuarios from "./componentes/RegistroUsuarios.tsx";
+import CrearCurso from "./componentes/CrearCurso.tsx";
+import CrearModulos from "./componentes/CrearModulos.tsx";
+import CrearLeccion from "./componentes/CrearLeccion.tsx";
 
 
 const router = createBrowserRouter([
@@ -45,7 +48,22 @@ const router = createBrowserRouter([
       element: <Apiclient/>},
       
       {path: "/singin",
-        element: <RegistroUsuarios/>}
+      element: <RegistroUsuarios/>}
+      ,
+      
+      {path: "/cursocrear",
+        element: <CrearCurso/>}
+      ,
+      
+      {path: "/modulocrear",
+        element: <CrearModulos cantidad={7}/>}
+      ,
+      
+      {path: "/leccioncrear",
+        element: <CrearLeccion/>}
+      
+      
+      
     ]
   }
 

@@ -2,7 +2,8 @@ import React, { Component, ChangeEvent, FormEvent } from 'react';
 import Form from 'react-bootstrap/Form';
 import Stack from 'react-bootstrap/Stack';
 import Button from 'react-bootstrap/Button';
-
+import logo from './home/img/coursera-logo.svg'
+import { Link } from 'react-router-dom';
 // Alias para cubrir todos los tipos posibles de elementos de formulario
 type FormElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
@@ -75,10 +76,16 @@ export class RegistroUsuarios extends Component<RegistroUsuariosProps, RegistroU
   };
 
   render() {
-    return (
+    return (<>
+    <Link to="/landing">
+          <img src={logo} alt="Description" className='m w-25 h-25' style={{margin:'20px 550px '}}  />
+          </Link>
       <div className=' border-5 border-primary mx-auto m-200px'>
         <Stack as="form" onSubmit={this.handleSubmit} className="mx-auto mt-5 border-2 border border-opacity-10 border-primary " gap={3} style={{ width: "500px", padding: "15px", borderRadius: "5px" }}>
+          
+          
           <div>
+
             <Form.Label htmlFor="nombre">Nombre</Form.Label>
             <Form.Control
               type="text"
@@ -87,7 +94,7 @@ export class RegistroUsuarios extends Component<RegistroUsuariosProps, RegistroU
               value={this.state.nombre}
               onChange={this.handleChange}
               required
-            />
+              />
           </div>
           <div>
             <Form.Label htmlFor="email">Email</Form.Label>
@@ -98,7 +105,7 @@ export class RegistroUsuarios extends Component<RegistroUsuariosProps, RegistroU
               value={this.state.email}
               onChange={this.handleChange}
               required
-            />
+              />
           </div>
           <div>
             <Form.Label htmlFor="tipoUsuario">Rol</Form.Label>
@@ -107,7 +114,7 @@ export class RegistroUsuarios extends Component<RegistroUsuariosProps, RegistroU
               value={this.state.tipoUsuario}
               onChange={this.handleChange}
               required
-            >
+              >
               <option value="1">Estudiante</option>
               <option value="2">Instructor</option>
             </Form.Select>
@@ -121,11 +128,12 @@ export class RegistroUsuarios extends Component<RegistroUsuariosProps, RegistroU
               value={this.state.contrasena}
               onChange={this.handleChange}
               required
-            />
+              />
           </div>
           <Button variant="primary" className=" w-25" type="submit">Registrar</Button>
         </Stack>
       </div>
+                </>
     );
   }
 }
