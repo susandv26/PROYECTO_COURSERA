@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, Button, Accordion, ListGroup } from 'react-bootstrap';
 import { Book, ChevronRight, Calendar, Clock, Person } from 'react-bootstrap-icons';
+import { useNavigate } from 'react-router-dom';
 
-// Definimos los tipos para nuestras estructuras de datos
 type Leccion = {
   id: number;
   nombre: string;
@@ -24,7 +24,6 @@ type Curso = {
   modulos: Modulo[];
 };
 
-// Ejemplo de un curso con módulos y lecciones
 const cursoDemostracion: Curso = {
   id: 1,
   nombre: 'Desarrollo Web con React',
@@ -66,9 +65,14 @@ const cursoDemostracion: Curso = {
 };
 
 export default function CursoComponent() {
+    const navigate = useNavigate();
+    
   const iniciarModulo = (moduloId: number) => {
+
+
     console.log(`Iniciando módulo ${moduloId}`);
-    // Aquí iría la lógica para iniciar el módulo
+    navigate(`/modulo`);
+    
   };
 
   return (
@@ -91,7 +95,6 @@ export default function CursoComponent() {
           <p>{cursoDemostracion.descripcion}</p>
         </aside>
 
-        {/* Main content */}
         <main className="col-md-8 col-lg-9 p-4 flex-fill overflow-auto">
           <h2 className="h4 mb-4">Módulos del Curso</h2>
           {cursoDemostracion.modulos.map((modulo) => (

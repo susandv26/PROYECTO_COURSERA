@@ -49,10 +49,10 @@ export default function Navbar() {
         <LoginModal />
       </div>
       <div className="navbar-join" >
-        <a href="#">
+        <Link to="/singin">
           Únete de forma <br />
           gratuita
-        </a>
+        </Link>
       </div>
     </div>
   </nav>

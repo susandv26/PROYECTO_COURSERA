@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
 import { ArrowLeft, Clock, Calendar, CheckCircle, Book } from 'react-bootstrap-icons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import Footer from './footer';
 
 type Curso = {
   id: number;
@@ -32,21 +33,16 @@ const curso: Curso = {
 };
 
 export default function InscripcionCursoPage() {
-  const inscribirse = () => {
+  const navigate=useNavigate();
+    const inscribirse = () => {
     console.log('Inscripción al curso iniciada');
-    // Aquí iría la lógica para procesar la inscripción
+    navigate('/miscursos');
+    
   };
 
   return (
     <div className="min-vh-100 bg-light">
-      <header className="bg-dark text-white py-4">
-        <Container>
-          <Link to="/" className="d-flex align-items-center text-white text-decoration-none">
-            <ArrowLeft className="me-2" />
-            Volver a la lista de cursos
-          </Link>
-        </Container>
-      </header>
+   
 
       <main className="container py-5">
         <h1 className="display-4 mb-4">{curso.nombre}</h1>
@@ -97,11 +93,7 @@ export default function InscripcionCursoPage() {
         </div>
       </main>
 
-      <footer className="bg-dark text-white py-3">
-        <Container className="text-center">
-          <p className="mb-0">&copy; 2023 Plataforma de Cursos Online. Todos los derechos reservados.</p>
-        </Container>
-      </footer>
+     <Footer/>
     </div>
   );
 }

@@ -21,6 +21,7 @@ import Lecciones from "./componentes/Lecciones.tsx";
 import Modulos from "./componentes/Modulos.tsx";
 import Cursos from "./componentes/Cursos.tsx";
 import Inscripcion from "./componentes/Inscripcion.tsx";
+import Navbar from "./componentes/nav/NavBar.tsx";
 
 
 const router = createBrowserRouter([
@@ -37,16 +38,8 @@ const router = createBrowserRouter([
         element: <MisCursos />,
       },
       {
-        path: "/perfil",
-        element: <Perfil />,
-      },
-      {
         path: "/instructor",
         element: <Instructor />,
-      },
-      {
-        path: "/home",
-        element: <Home />,
       },
       {path: "/api",
       element: <Apiclient/>},
@@ -88,13 +81,25 @@ const router = createBrowserRouter([
       
       
     ]
+  },
+  {
+    path: "/perfil",
+    element: <Perfil />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
   }
 
 ]);
 
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
+  <>
+
   <React.StrictMode>
+
    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
+  </>
 );

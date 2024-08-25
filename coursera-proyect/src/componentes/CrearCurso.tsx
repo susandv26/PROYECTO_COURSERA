@@ -8,7 +8,7 @@ export default function CrearCurso() {
     descripcion: '',
     categoria: '',
     precio: '',
-    modulos: 0  // Nuevo campo para el número de módulos
+    modulos: 0  
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -22,7 +22,7 @@ export default function CrearCurso() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Datos del formulario:', formData);
-    // Lógica para enviar los datos a un servidor
+    
   };
 
   return (

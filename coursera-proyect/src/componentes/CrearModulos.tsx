@@ -9,7 +9,6 @@ export default class CrearModulos extends Component<CrearModulosProps> {
   render() {
     const { cantidad } = this.props;
 
-    // Generar los items del acordeón de acuerdo a la cantidad proporcionada
     const items = [];
     for (let i = 0; i < cantidad; i++) {
       items.push(

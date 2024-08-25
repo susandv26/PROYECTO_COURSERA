@@ -3,49 +3,46 @@ import Form from 'react-bootstrap/Form';
 import Stack from 'react-bootstrap/Stack';
 import Button from 'react-bootstrap/Button';
 import logo from './home/img/coursera-logo.svg'
-import { Link } from 'react-router-dom';
-// Alias para cubrir todos los tipos posibles de elementos de formulario
+import { Link, useNavigate } from 'react-router-dom';
+import Footer from './footer';
+
 type FormElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
 
 interface RegistroUsuariosProps {
-  // Si tienes props, puedes definirlas aquí
 }
 
 interface RegistroUsuariosState {
-  nombre: string;
-  email: string;
-  tipoUsuario: string;
-  contrasena: string;
+    nombre: string;
+    email: string;
+    tipoUsuario: string;
+    contrasena: string;
 }
 
 export class RegistroUsuarios extends Component<RegistroUsuariosProps, RegistroUsuariosState> {
-  constructor(props: RegistroUsuariosProps) {
-    super(props);
-    this.state = {
-      nombre: '',
-      email: '',
-      tipoUsuario: '1', // Valor inicial por defecto
-      contrasena: ''
+    
+    constructor(props: RegistroUsuariosProps) {
+        super(props);
+        this.state = {
+            nombre: '',
+            email: '',
+            tipoUsuario: '1', 
+            contrasena: ''
+        };
+    }
+    
+    handleChange = (e: ChangeEvent<FormElement>) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        } as Pick<RegistroUsuariosState, keyof RegistroUsuariosState>);
     };
-  }
-
-  // Manejar cambios en los campos del formulario
-  handleChange = (e: ChangeEvent<FormElement>) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    } as Pick<RegistroUsuariosState, keyof RegistroUsuariosState>);
-  };
-
-  // Manejar el envío del formulario
-  handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    
+    handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
 
     const { nombre, email, tipoUsuario, contrasena } = this.state;
     
-    // Endpoint de la API (debes cambiar esta constante cuando tengas el endpoint real)
-    const API_ENDPOINT = 'https://api.ejemplo.com/registro';
+    const API_ENDPOINT = 'apiurl';
 
-    // Datos que se enviarán en el cuerpo del POST
     const data = {
       nombre,
       email,
@@ -54,10 +51,8 @@ export class RegistroUsuarios extends Component<RegistroUsuariosProps, RegistroU
     };
 
 
-    console.log('JSON a enviar:', JSON.stringify(data, null, 2)); //no mas para verificar el envio de datos
-    
-    
-    // Envío de los datos mediante una petición POST
+    console.log('JSON a enviar:', JSON.stringify(data, null, 2)); 
+
     fetch(API_ENDPOINT, {
       method: 'POST',
       headers: {
@@ -68,7 +63,6 @@ export class RegistroUsuarios extends Component<RegistroUsuariosProps, RegistroU
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
-      // Puedes agregar lógica adicional aquí, como redireccionar al usuario
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -130,9 +124,12 @@ export class RegistroUsuarios extends Component<RegistroUsuariosProps, RegistroU
               required
               />
           </div>
-          <Button variant="primary" className=" w-25" type="submit">Registrar</Button>
+          <Link to='/landing'>
+          <Button variant="primary" className=" w-25" type="submit" >Registrar</Button>
+          </Link>
         </Stack>
       </div>
+      <Footer/>
                 </>
     );
   }

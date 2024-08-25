@@ -3,6 +3,7 @@
 import picture from './imagenes/Example.png';
 import { Button } from 'react-bootstrap';
 import Footer from './footer';
+import { Link } from 'react-router-dom';
 
 export default function MisCursos() {
   return (<>
@@ -17,7 +18,7 @@ export default function MisCursos() {
  
 </ul>
 
-    <MisCursosCard titulo={'ingles'} descripcion={"Aprende y certifica tu habilidades en el idioma"} tipo={"curso"} empresa={"UNAH"}/>
+    <MisCursosCard titulo={'React'} descripcion={"Aprende a dominar React"} tipo={"curso"} empresa={"coursera"}/>
     <MisCursosCard 
   titulo={"Inglés Básico"} 
   descripcion={"Aprende y certifica tus habilidades en el idioma inglés desde nivel básico."} 
@@ -78,8 +79,10 @@ function MisCursosCard(props:props) {
       </div>
       <div className='col-md-3'>   
         <div className="align-items-center  flex-column d-flex mt-4">
+      <Link to='/curso'>
       <button className="btn btn-primary mb-2">Ir al curso</button>
-      <Button variant="outline-primary">Fijar fecha de finalizacion</Button>
+      </Link>
+      <Button variant="outline-primary" >Fijar fecha de finalizacion</Button>
     </div>
     </div>
     </div>

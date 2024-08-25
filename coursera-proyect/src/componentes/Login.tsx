@@ -9,7 +9,7 @@ function LoginModal() {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate('/perfil');
+    navigate('/home');
   };
   const [show, setShow] = useState(false);
 
@@ -73,7 +73,7 @@ function PlaintextExample() {
           Email
         </Form.Label>
         <Col sm="10">
-          <Form.Control plaintext readOnly defaultValue="email@example.com" />
+          <Form.Control type="text" defaultValue="email@example.com" />
         </Col>
       </Form.Group>
 

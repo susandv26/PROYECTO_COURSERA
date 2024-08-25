@@ -20,14 +20,12 @@ export default function CrearLeccion() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     
-    // Construir el payload según el tipo de lección
     const payload = {
       tipoLeccion,
       contenido: tipoLeccion === "texto" ? contenido : { pregunta, respuestas, respuestaCorrecta }
     }
     
     try {
-      // Aquí puedes cambiar la URL por la de tu API
       const response = await axios.post('/api/lecciones', payload)
       console.log('Lección guardada:', response.data)
     } catch (error) {

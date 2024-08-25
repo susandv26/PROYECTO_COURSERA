@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button, Badge } from "react-bootstrap";
 import { Book, QuestionCircle } from "react-bootstrap-icons";
+import { useNavigate } from "react-router-dom";
 
 // Definimos el tipo para una lección
 type Leccion = {
@@ -20,10 +21,11 @@ const lecciones: Leccion[] = [
 ];
 
 export default function Modulos() {
-  // Función para manejar el inicio de una lección
+
+    const navigate=useNavigate();
   const iniciarLeccion = (id: number) => {
     console.log(`Iniciando lección ${id}`);
-    // Aquí irá la lógica para iniciar la lección, como navegar a ella
+    navigate('/leccion');
   };
 
   return (

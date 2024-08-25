@@ -4,6 +4,7 @@ import google from './img/logo-google.png'
 import karin from './img/photo_karim.png'
 import './css/styles.css'
 import { Link } from 'react-router-dom'
+import Navbar from '../nav/NavBar'
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
   />
   <link rel="stylesheet" href="./css/styles.css" />
   <nav className="navbar bg-body-tertiary">
-   
+  <Navbar/> 
     <div>
       <ul className="nav nav-underline">
         <li className="nav-item">
@@ -103,9 +104,9 @@ export default function Home() {
                 </p>
               </div>
               <h3 className="card-title">Gestion de proyectos Google</h3>
-              <a className="card-text">
+              <Link to="/inscripcion" className="card-text" >
                 Realiza progresospara realizar un programa de grado.
-              </a>
+              </Link>
               <p className="card-pie">Certificado Profesional</p>
             </div>
           </div>
@@ -143,3 +144,6 @@ export default function Home() {
 
   )
 }
+   
+
+
